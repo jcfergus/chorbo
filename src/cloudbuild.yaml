@@ -6,6 +6,6 @@ steps:
   - deploy
   - chorbo-webhook
   - --region=us-central1
-  - --source=./src
+  - "--source=https://source.cloud.google.com/chorbo/github_jcfergus_chorbo/+/main:/src"
   - --trigger-http
   - --runtime=nodejs14
