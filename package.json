@@ -1,0 +1,23 @@
+{
+  "name": "chorbo",
+  "version": "1.0.0",
+  "description": "ChoreBot",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcfergus/chorbo.git"
+  },
+  "author": "Justin Ferguson <jferg@jferg.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcfergus/chorbo/issues"
+  },
+  "homepage": "https://github.com/jcfergus/chorbo#readme",
+  "dependencies": {
+    "slack-block-builder": "^2.3.1"
+  }
+}
