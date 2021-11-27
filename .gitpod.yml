@@ -1,7 +1,7 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - init: echo 'init script' # runs during prebuild
-    command: echo 'start script'
+    command: (echo $GOOGLE_SDK_CREDS > ~/.google_application_credentials) && gcloud auth activate-service-account --key-file=/home/gitpod/.google_application_credentials
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
