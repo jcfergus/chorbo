@@ -1,7 +1,9 @@
-# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+
 tasks:
   - init: echo 'init script' # runs during prebuild
     command: (echo $GOOGLE_SDK_CREDS > ~/.google_application_credentials) && gcloud auth activate-service-account --key-file=/home/gitpod/.google_application_credentials
+    env: 
+      - CLOUDSDK_CORE_PROJECT: chorbo
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
@@ -10,3 +12,7 @@ ports:
 
 image:
   file: .gitpod.Dockerfile
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - https://github.com/GoogleCloudPlatform/cloud-code-vscode/releases/download/v1.14.1/cloudcode-1.14.1.vsix
