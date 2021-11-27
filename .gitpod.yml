@@ -1,7 +1,12 @@
 
 tasks:
   - init: echo 'init script' # runs during prebuild
-    command: (echo $GOOGLE_SDK_CREDS > ~/.google_application_credentials) && gcloud auth activate-service-account --key-file=/home/gitpod/.google_application_credentials
+    command: | 
+      (echo $GOOGLE_SDK_CREDS > ~/.google_application_credentials) \
+      && gcloud auth activate-service-account --key-file=/home/gitpod/.google_application_credentials \
+      && gcloud config set project $CLOUDSDK_CORE_PROJECT
+
+
     env: 
       - CLOUDSDK_CORE_PROJECT: chorbo
 
@@ -16,3 +21,7 @@ vscode:
   extensions:
     - dbaeumer.vscode-eslint
     - https://github.com/GoogleCloudPlatform/cloud-code-vscode/releases/download/v1.14.1/cloudcode-1.14.1.vsix
+    - ms-azuretools.vscode-docker
+    - github.vscode-pull-request-github
+    - esbenp.prettier-vscode
+    - vscodevim.vim
